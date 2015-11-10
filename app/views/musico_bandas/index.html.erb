@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Musicos por Bandas</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Musico</th>
+      <th>Banda</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @musico_bandas.each do |musico_banda| %>
+      <tr>
+        <td><%= musico_banda.musico%></td>
+        <td><%= musico_banda.banda%></td>
+        <td ><%= link_to 'Show', musico_banda %></td>
+        <td><%= link_to 'Edit', edit_musico_banda_path(musico_banda) %></td>
+        <td><%= link_to 'Destroy', musico_banda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Musico banda', new_musico_banda_path %>

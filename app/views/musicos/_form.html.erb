@@ -1,0 +1,39 @@
+<%= form_for(@musico) do |f| %>
+  <% if @musico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@musico.errors.count, "error") %> prohibited this musico from being saved:</h2>
+
+      <ul>
+      <% @musico.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :paterno %><br>
+    <%= f.text_field :paterno %>
+  </div>
+  <div class="field">
+    <%= f.label :materno %><br>
+    <%= f.text_field :materno %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br>
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :instrumento_id %><br>
+    <%= f.number_field :instrumento_id %>
+  </div>
+ 
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

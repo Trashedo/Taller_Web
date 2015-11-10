@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @musico.nombre %>
+</p>
+
+<p>
+  <strong>Paterno:</strong>
+  <%= @musico.paterno %>
+</p>
+
+<p>
+  <strong>Materno:</strong>
+  <%= @musico.materno %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @musico.usuario_id %>
+</p>
+
+<p>
+  <strong>Instrumento:</strong>
+  <%= @musico.instrumento_id %>
+</p>
+
+<h2>Tus Bandas</h2>
+<% @bandas.each do |banda|%>
+<p>
+  <strong>Nombre:</strong>
+  <%= @banda.nombre %>
+</p>
+<p>
+  <strong>Genero:</strong>
+  <%= @banda.Genero %>
+</p>
+
+<%= link_to 'Edit', edit_musico_path(@musico) %> |
+<%= link_to 'Back', musicos_path %>

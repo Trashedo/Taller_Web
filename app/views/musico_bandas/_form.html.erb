@@ -1,0 +1,25 @@
+<%= form_for(@musico_banda) do |f| %>
+  <% if @musico_banda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@musico_banda.errors.count, "error") %> prohibited this musico_banda from being saved:</h2>
+
+      <ul>
+      <% @musico_banda.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :musico_id %><br>
+    <%= f.text_field :musico_id %>
+  </div>
+  <div class="field">
+    <%= f.label :banda_id %><br>
+    <%= f.text_field :banda_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

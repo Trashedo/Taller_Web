@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  paterno: MyString
+  materno: MyString
+  usuario_id: 1
+  instrumento_id: 1
+  usuario_id: 
+  instrumento_id: 
+
+two:
+  nombre: MyString
+  paterno: MyString
+  materno: MyString
+  usuario_id: 1
+  instrumento_id: 1
+  usuario_id: 
+  instrumento_id: 
